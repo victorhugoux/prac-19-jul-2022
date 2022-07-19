@@ -25,9 +25,11 @@ body {
 
 .loader span {
     mix-blend-mode: difference;
+    display: block;
 }
 
 .loader::after {
+    display: block;
     content: attr(data-descr);
     position: absolute;
     height: calc(8rem);
