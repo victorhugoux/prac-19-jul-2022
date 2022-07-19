@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.loader {
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    text-align: center;
+
+}
+
+.loader span {
+    mix-blend-mode: difference;
+    display: block;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 40px);
+    left: 0;
+    top: 20px;
+    width: 30%;
+    background-color: white;
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+    animation: animate 4s infinite linear;
+}
+
+@keyframes animate {
+    0%
+    100% {
+        transform: translatex(0px);
+    }
+
+    50% {
+        transform: translatex(250px);
+    }
+}
