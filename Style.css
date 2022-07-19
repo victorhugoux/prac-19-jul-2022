@@ -1,42 +1,48 @@
 body {
-    margin: 0;
     padding: 0;
-    background-color: black;
+    margin: 0;
+    border: 0;
+    background-color: #590253;
 }
-.loader {
-    font-size: 5rem;
-    color: white;
-    position: absolute;
-    text-align: center;
 
+.loader {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    color: #8A038C;
+    text-align: center;
+}
+
+.loader h1 {
+    line-height: .5;
+    color:#8A038C;
 }
 
 .loader span {
     mix-blend-mode: difference;
-    display: block;
 }
 
 .loader::after {
     content: '';
     position: absolute;
-    height: calc(100% - 40px);
-    left: 0;
+    height: calc(47% - 40px);
+    left: 20rem;
     top: 20px;
     width: 30%;
-    background-color: white;
+    background-color: #8A038C;
     z-index: -1;
-    color: white;
+    color: #590253;
     overflow: hidden;
     animation: animate 4s infinite linear;
 }
 
 @keyframes animate {
     0%
+
     100% {
         transform: translatex(0px);
     }
 
     50% {
-        transform: translatex(250px);
+        transform: translatex(330px);
     }
 }
